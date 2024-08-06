@@ -6,12 +6,12 @@
 
 
 // function expression
-function fun(){
+function fun() {
     console.log("Fun called");
-    
+
 }
 
-function gun(){
+function gun() {
     console.log("inside the gun");
     fun();
     console.log("Leaving the gun");
@@ -20,10 +20,15 @@ function gun(){
 gun();
 
 
+// Anynomus functions
+const sum1 = function (a, b) {
+    return a + b;
+}
+console.log(sum1(10, 20));
+
 // Named function
-function add(a,b){
-    return a+b;
+const sum2 = function add(a, b) {
+    return a + b;
 }
 
-console.log(add(10,20));
- 
+console.log(sum2(10, 20));
