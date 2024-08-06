@@ -38,3 +38,16 @@
 // setTimeout(function fun() {
 //     console.log("Fun called");
 // },2000)
+
+function todo(fun){
+    setTimeout(function gun(){
+        console.log("Fun called",fun);
+        
+    },2000)
+}
+
+console.log("Starting todo");
+todo();
+console.log("Finished todo");
+
+
