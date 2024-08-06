@@ -6,29 +6,35 @@
 
 
 // function expression
-function fun() {
-    console.log("Fun called");
+// function fun() {
+//     console.log("Fun called");
 
-}
+// }
 
-function gun() {
-    console.log("inside the gun");
-    fun();
-    console.log("Leaving the gun");
-}
+// function gun() {
+//     console.log("inside the gun");
+//     fun();
+//     console.log("Leaving the gun");
+// }
 
-gun();
+// gun();
 
 
-// Anynomus functions
-const sum1 = function (a, b) {
-    return a + b;
-}
-console.log(sum1(10, 20));
+// // Anynomus functions
+// const sum1 = function (a, b) {
+//     return a + b;
+// }
+// console.log(sum1(10, 20));
 
-// Named function
-const sum2 = function add(a, b) {
-    return a + b;
-}
+// // Named function
+// const sum2 = function add(a, b) {
+//     return a + b;
+// }
 
-console.log(sum2(10, 20));
+// console.log(sum2(10, 20));
+
+
+//Set Time out
+// setTimeout(function fun() {
+//     console.log("Fun called");
+// },2000)
