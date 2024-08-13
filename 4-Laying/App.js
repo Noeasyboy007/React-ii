@@ -1,18 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-const heading = React.createElement(
+const heading1 = React.createElement(
     "h1",
     {
       id: "title",
-    },
-    "heading"
-  );
-  const heading1 = React.createElement(
-    "h1",
-    {
-      id: "title",
+      key:"h2",
     },
     "heading1"
+  );
+  const heading2 = React.createElement(
+    "h2",
+    {
+      id: "title",
+      key :"h2",
+    },
+    "heading2"
   );
   
   const container = React.createElement(
@@ -20,7 +22,7 @@ const heading = React.createElement(
     {
       id: "container",
     },
-    [heading, heading1]
+    [heading1, heading2]
   );
   
   // create root using createRoot
