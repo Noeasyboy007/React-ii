@@ -26,7 +26,7 @@ const container = React.createElement(
 );
 
 // JSX ->??
-const heading3 = <h3 id="titel3" key="h3">heading3</h3>
+const heading3 = (<h3 id="titel3" key="h3">heading3</h3>);
 
 // create root using createRoot
 const root = ReactDOM.createRoot(document.getElementById("root"));
