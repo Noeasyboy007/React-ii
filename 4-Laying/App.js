@@ -1,34 +1,37 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-const heading1 = React.createElement(
-  "h1",
-  {
-    id: "title1",
-    key: "h1",
-  },
-  "heading1"
-);
-const heading2 = React.createElement(
-  "h2",
-  {
-    id: "title2",
-    key: "h2",
-  },
-  "heading2"
-);
-
-const container = React.createElement(
-  "div",
-  {
-    id: "container",
-  },
-  [heading1, heading2]
-);
 
 // JSX ->??
-const heading3 = (<h3 id="titel3" key="h3">heading3</h3>);
+const heading = (
+  <h3 id="titel3" key="h3">
+    heading
+  </h3>
+);
 
-// create root using createRoot
+// compomant
+// Function Component
+
+// 1 Way we write compnent
+const HeaderComponent1 = () => {
+  return <h1>
+    Hello World
+  </h1>
+};
+
+// 2 Way we write component
+const HeaderComponent2 = () => {
+  return (
+    <div>
+      <h1>
+        Hello World
+      </h1>
+      <h2>
+        Hello World
+      </h2>
+    </div>
+  )
+};
+
 const root = ReactDOM.createRoot(document.getElementById("root"));
-// passing react element inside root
-root.render(container);
+
+root.render(heading);
