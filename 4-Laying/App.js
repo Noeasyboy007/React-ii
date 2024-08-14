@@ -13,20 +13,22 @@ const heading = (
 
 // 1 Way we write compnent
 const HeaderComponent1 = () => {
-  return <h1>
+  return <h3>
+    
     Hello World
-  </h1>
+  </h3>
 };
 
 // 2 Way we write component
 const HeaderComponent2 = () => {
   return (
     <div>
+      <HeaderComponent1/>              
       <h1>
         Hello World
       </h1>
       <h2>
-        Hello World
+        Hello World 2
       </h2>
     </div>
   )
@@ -34,4 +36,4 @@ const HeaderComponent2 = () => {
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
-root.render(heading);
+root.render(<HeaderComponent2/>);
