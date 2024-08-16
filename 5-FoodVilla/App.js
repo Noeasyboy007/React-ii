@@ -1,34 +1,24 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 
-// JSX ->??
-const heading = (
-  <h3 id="titel3" key="h3">
-    heading
-  </h3>
-);
-
-// compomant
-// Function Component
 
 // 1 Way we write compnent
-const HeaderComponent1 = () => {
-  return <h3>
-    
-    Hello World
-  </h3>
+const Title = () => {
+  return <h1>
+    Title
+  </h1>
 };
 
 // 2 Way we write component
-const HeaderComponent2 = () => {
+const HeaderComponent = () => {
   return (
     <div>
-      <HeaderComponent1/>              
-      <h1>
-        Hello World
-      </h1>
+      <Title/>              
       <h2>
-        Hello World 2
+        Heading1
+      </h2>
+      <h2>
+        Heading2
       </h2>
     </div>
   )
@@ -36,4 +26,4 @@ const HeaderComponent2 = () => {
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
-root.render(<HeaderComponent2/>);
+root.render(<HeaderComponent/>);
