@@ -1,3 +1,14 @@
-#container{
-    background-color: blueviolet;
+.header{
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+}
+
+.nav-items > ul{
+    list-style: none;
+    display: flex;
+}
+
+.nav-items > ul > li{
+    padding: 10px;
 }

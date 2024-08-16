@@ -2,28 +2,29 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 
 
-// 1 Way we write compnent
+// Title COmponent
 const Title = () => {
   return <h1>
-    Title
+    Food Villa
   </h1>
 };
 
-// 2 Way we write component
+// Header component
 const HeaderComponent = () => {
   return (
-    <div>
-      <Title/>              
-      <h2>
-        Heading1
-      </h2>
-      <h2>
-        Heading2
-      </h2>
+    <div className="header">
+      <Title />
+        <div className="nav-items" >
+          <ul>
+            <li>Home</li>
+            <li>About</li>
+            <li>Contact</li>
+          </ul>
+        </div>
     </div>
   )
 };
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
-root.render(<HeaderComponent/>);
+root.render(<HeaderComponent />);
