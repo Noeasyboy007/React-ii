@@ -1487,8 +1487,8 @@ const restrauntList = [
 
 
 //Restraunt Card 
-const RestrauntCard = ({restraunt}) => {
-  const {cloudinaryImageId,name,cuisines,areaName,costForTwo}=restraunt.info
+const RestrauntCard = ({cloudinaryImageId,name,cuisines,areaName,costForTwo}) => {
+  // const {}=restraunt.info
   return (
     <div className="card">
       <img src={"https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/" +cloudinaryImageId}/>
@@ -1504,26 +1504,27 @@ const RestrauntCard = ({restraunt}) => {
 const Body = () => {
   return (
     <div className="restraunt-list">
-      <RestrauntCard restraunt={restrauntList[0]} />
-      <RestrauntCard restraunt={restrauntList[1]} />
-      <RestrauntCard restraunt={restrauntList[2]} />
-      <RestrauntCard restraunt={restrauntList[3]} />
-      <RestrauntCard restraunt={restrauntList[4]} />
-      <RestrauntCard restraunt={restrauntList[5]} />
-      <RestrauntCard restraunt={restrauntList[6]} />
-      <RestrauntCard restraunt={restrauntList[7]} />
-      <RestrauntCard restraunt={restrauntList[8]} />
-      <RestrauntCard restraunt={restrauntList[9]} />
-      <RestrauntCard restraunt={restrauntList[10]} />
-      <RestrauntCard restraunt={restrauntList[11]} />
-      <RestrauntCard restraunt={restrauntList[12]} />
-      <RestrauntCard restraunt={restrauntList[13]} />
-      <RestrauntCard restraunt={restrauntList[14]} />
-      <RestrauntCard restraunt={restrauntList[15]} />
-      <RestrauntCard restraunt={restrauntList[16]} />
-      <RestrauntCard restraunt={restrauntList[17]} />
-      <RestrauntCard restraunt={restrauntList[18]} />
-      <RestrauntCard restraunt={restrauntList[19]} />
+      <RestrauntCard {...restrauntList[0].info} />
+      <RestrauntCard {...restrauntList[1].info} />
+      <RestrauntCard {...restrauntList[2].info} />
+      <RestrauntCard {...restrauntList[3].info} />
+      <RestrauntCard {...restrauntList[4].info} />
+      <RestrauntCard {...restrauntList[5].info} />
+      <RestrauntCard {...restrauntList[6].info} />
+      <RestrauntCard {...restrauntList[7].info} />
+      <RestrauntCard {...restrauntList[8].info} />
+      <RestrauntCard {...restrauntList[9].info} />
+      <RestrauntCard {...restrauntList[9].info} />
+      <RestrauntCard {...restrauntList[10].info} />
+      <RestrauntCard {...restrauntList[11].info} />
+      <RestrauntCard {...restrauntList[12].info} />
+      <RestrauntCard {...restrauntList[13].info} />
+      <RestrauntCard {...restrauntList[14].info} />
+      <RestrauntCard {...restrauntList[15].info} />
+      <RestrauntCard {...restrauntList[16].info} />
+      <RestrauntCard {...restrauntList[17].info} />
+      <RestrauntCard {...restrauntList[18].info} />
+      <RestrauntCard {...restrauntList[19].info} />
 
     </div>
   )
