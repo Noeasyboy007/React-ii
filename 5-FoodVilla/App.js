@@ -1488,14 +1488,14 @@ const restrauntList = [
 
 //Restraunt Card 
 const RestrauntCard = ({restraunt}) => {
-  // console.log(props);
+  const {cloudinaryImageId,name,cuisines,areaName,costForTwo}=restraunt.info
   return (
     <div className="card">
-      <img src={"https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/" + restraunt.info.cloudinaryImageId} />
-      <h2>{restraunt.info?.name}</h2>
-      <h3>{restraunt.info?.cuisines.join(", ")}</h3>
-      <h4>{restraunt.info?.areaName}</h4>
-      <h4>{restraunt.info?.costForTwo}</h4>
+      <img src={"https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/" +cloudinaryImageId}/>
+      <h2>{name}</h2>
+      <h3>{cuisines.join(", ")}</h3>
+      <h4>{areaName}</h4>
+      <h4>{costForTwo}</h4>
     </div>
   )
 }
