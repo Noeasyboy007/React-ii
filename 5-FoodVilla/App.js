@@ -1504,7 +1504,12 @@ const RestrauntCard = ({cloudinaryImageId,name,cuisines,areaName,costForTwo}) =>
 const Body = () => {
   return (
     <div className="restraunt-list">
-      <RestrauntCard {...restrauntList[0].info} />
+      {
+       restrauntList.map((restraunt)=>{
+        return <RestrauntCard {...restraunt.info}/>
+       })
+      }
+      {/* <RestrauntCard {...restrauntList[0].info} />
       <RestrauntCard {...restrauntList[1].info} />
       <RestrauntCard {...restrauntList[2].info} />
       <RestrauntCard {...restrauntList[3].info} />
@@ -1524,7 +1529,7 @@ const Body = () => {
       <RestrauntCard {...restrauntList[16].info} />
       <RestrauntCard {...restrauntList[17].info} />
       <RestrauntCard {...restrauntList[18].info} />
-      <RestrauntCard {...restrauntList[19].info} />
+      <RestrauntCard {...restrauntList[19].info} /> */}
 
     </div>
   )
