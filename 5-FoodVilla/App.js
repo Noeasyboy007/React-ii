@@ -1506,7 +1506,7 @@ const Body = () => {
     <div className="restraunt-list">
       {
        restrauntList.map((restraunt)=>{
-        return <RestrauntCard {...restraunt.info}/>
+        return <RestrauntCard {...restraunt.info} key={restraunt.info.id}/>
        })
       }
       {/* <RestrauntCard {...restrauntList[0].info} />
