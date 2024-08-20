@@ -2,10 +2,18 @@ import { restrauntList } from "./config";
 import RestrauntCard from "./RestrauntCard";
 import { useState } from "react"
 
+//filter functions
+function filterData(searchInput, restraunt) {
+    return restraunt.filter((restraunt) =>
+        restraunt.info.name.toLowerCase().includes(searchInput.toLowerCase())
+    );
+}
 
 // Body component
 const Body = () => {
-    const [searchInput, setSearchInput] = useState()
+    const [restraunt, setRestraunt] = useState(restrauntList);
+    const [searchInput, setSearchInput] = useState("");
+
     return (
         <>
             <div className="search-container">
@@ -18,11 +26,20 @@ const Body = () => {
                         setSearchInput(e.target.value)
                     }}
                 />
-                <button className="search-btn">Search</button>
+
+                <button
+                    className="search-btn"
+                    onClick={() => {
+                        //Filter the data
+                        const data = filterData(searchInput, restraunt);
+                        //update the state 
+                        setRestraunt(data);
+                    }}
+                >Search</button>
             </div>
             <div className="restraunt-list">
                 {
-                    restrauntList.map((restraunt) => {
+                    restraunt.map((restraunt) => {
                         return <RestrauntCard {...restraunt.info} key={restraunt.info.id} />
                     })
                 }
