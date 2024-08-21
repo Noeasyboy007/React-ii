@@ -11,7 +11,9 @@ function filterData(searchInput, restraunt) {
 
 // Body component
 const Body = () => {
-    const [restraunt, setRestraunt] = useState(restrauntList);
+
+    const [restraunt, setRestraunt] = useState(restrauntList); // original list
+    const [filteredRestaurants, setFilteredRestaurants] = useState(restrauntList); // filtered list
     const [searchInput, setSearchInput] = useState("");
 
     return (
@@ -33,13 +35,13 @@ const Body = () => {
                         //Filter the data
                         const data = filterData(searchInput, restraunt);
                         //update the state 
-                        setRestraunt(data);
+                        setFilteredRestaurants(data);
                     }}
                 >Search</button>
             </div>
             <div className="restraunt-list">
                 {
-                    restraunt.map((restraunt) => {
+                    filteredRestaurants.map((restraunt) => {
                         return <RestrauntCard {...restraunt.info} key={restraunt.info.id} />
                     })
                 }
