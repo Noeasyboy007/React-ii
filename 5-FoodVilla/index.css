@@ -35,3 +35,8 @@
     flex-wrap: wrap;
     /* justify-content: space-between; */
 }
+
+.search-container{
+    padding: 10px;
+}
+
