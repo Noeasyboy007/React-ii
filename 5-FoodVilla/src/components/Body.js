@@ -17,8 +17,21 @@ const Body = () => {
     const [searchInput, setSearchInput] = useState("");
 
     useEffect(() => {
-        console.log("Call this when is dependencies changed");
+        // console.log("Call this when is dependencies changed");
+        //Get Data from API call
+        getRestaurants();
     }, [])
+
+    // Fetch data from API (Function)
+    async function getRestaurants() {
+        const data = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=22.5743545&lng=88.3628734&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING#")
+        const json = await data.json();
+        console.log(json);
+
+        setRestraunt(json.data.cards[6].card.card.brands)
+    }
+
+    console.log("render");
 
     return (
         <>
