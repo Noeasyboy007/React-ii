@@ -13,7 +13,7 @@ function filterData(searchInput, restraunt) {
 const Body = () => {
 
     const [restraunt, setRestraunt] = useState(restrauntList); // original list
-    const [filteredRestaurants, setFilteredRestaurants] = useState(restrauntList); // filtered list
+    
     const [searchInput, setSearchInput] = useState("");
 
     return (
