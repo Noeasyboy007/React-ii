@@ -1,6 +1,6 @@
-import { restrauntList } from "./config";
 import RestrauntCard from "./RestrauntCard";
 import { useState, useEffect } from "react"
+import SkelitonUi from './SkelitonUi';
 
 //filter functions
 function filterData(searchInput, restraunts) {
@@ -12,7 +12,8 @@ function filterData(searchInput, restraunts) {
 // Body component
 const Body = () => {
 
-    const [restraunts, setRestraunt] = useState(restrauntList); // original list
+    const [allRestraunts, setAllRestraunt] = useState([]); // original list
+    const [filterRestraunts, setFilterRestraunt] = useState([]); // original list
     const [searchInput, setSearchInput] = useState("");
 
     useEffect(() => {
@@ -28,13 +29,18 @@ const Body = () => {
         const data = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=22.5743545&lng=88.3628734&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING")
         const json = await data.json();
         console.log(json);
-        setRestraunt(json.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants)
+        setAllRestraunt(json.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants)
+        setFilterRestraunt(json.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants)
 
     }
 
     console.log("render");
 
-    return (
+    // not reder component (Early return)
+    if (!allRestraunts) return null;
+
+    // Conditional Rendering
+    return (allRestraunts.length === 0) ? <SkelitonUi /> : (
         <>
             <div className="search-container">
                 <input
@@ -51,15 +57,15 @@ const Body = () => {
                     className="search-btn"
                     onClick={() => {
                         //Filter the data
-                        const data = filterData(searchInput, restraunts);
+                        const data = filterData(searchInput, allRestraunts);
                         //update the state 
-                        setRestraunt(data);
+                        setFilterRestraunt(data);
                     }}
                 >Search</button>
             </div>
             <div className="restraunt-list">
-                {Array.isArray(restraunts) && restraunts.length > 0 ? (
-                    restraunts.map((restraunt) => (
+                {Array.isArray(filterRestraunts) && filterRestraunts.length > 0 ? (
+                    filterRestraunts.map((restraunt) => (
                         <RestrauntCard {...restraunt.info} key={restraunt.info.id} />
                     ))
                 ) : (
