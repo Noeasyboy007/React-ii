@@ -3,21 +3,19 @@ import RestrauntCard from "./RestrauntCard";
 import { useState, useEffect } from "react"
 
 //filter functions
-function filterData(searchInput, restraunt) {
-    return restraunt.filter((restraunt) =>
-        restraunt.info.name.toLowerCase().includes(searchInput.toLowerCase())
+function filterData(searchInput, restraunts) {
+    return restraunts.filter((restraunt) =>
+        restraunt?.info.name.toLowerCase().includes(searchInput.toLowerCase())
     );
 }
 
 // Body component
 const Body = () => {
 
-    const [restraunt, setRestraunt] = useState(restrauntList); // original list
-    const [filteredRestaurants, setFilteredRestaurants] = useState(restrauntList); // filtered list
+    const [restraunts, setRestraunt] = useState(restrauntList); // original list
     const [searchInput, setSearchInput] = useState("");
 
     useEffect(() => {
-        // console.log("Call this when is dependencies changed");
         //Get Data from API call
         getRestaurants();
     }, [])
@@ -28,7 +26,7 @@ const Body = () => {
         const json = await data.json();
         console.log(json);
 
-        setRestraunt(json.data.cards[6].card.card.brands)
+        // setRestraunt( json.data.cards[1].card.card)
     }
 
     console.log("render");
@@ -50,15 +48,15 @@ const Body = () => {
                     className="search-btn"
                     onClick={() => {
                         //Filter the data
-                        const data = filterData(searchInput, restraunt);
+                        const data = filterData(searchInput, restraunts);
                         //update the state 
-                        setFilteredRestaurants(data);
+                        setRestraunt(data);
                     }}
                 >Search</button>
             </div>
             <div className="restraunt-list">
                 {
-                    filteredRestaurants.map((restraunt) => {
+                    restraunts.map((restraunt) => {
                         return <RestrauntCard {...restraunt.info} key={restraunt.info.id} />
                     })
                 }
