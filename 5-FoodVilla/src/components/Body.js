@@ -18,15 +18,18 @@ const Body = () => {
     useEffect(() => {
         //Get Data from API call
         getRestaurants();
+        // console.log("useEffect Called");
+
     }, [])
+
 
     // Fetch data from API (Function)
     async function getRestaurants() {
-        const data = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=22.5743545&lng=88.3628734&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING#")
+        const data = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=22.5743545&lng=88.3628734&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING")
         const json = await data.json();
         console.log(json);
+        setRestraunt(json.data.cards[1].card.card.gridElements.infoWithStyle.restaurants)
 
-        // setRestraunt( json.data.cards[1].card.card)
     }
 
     console.log("render");
@@ -55,11 +58,13 @@ const Body = () => {
                 >Search</button>
             </div>
             <div className="restraunt-list">
-                {
-                    restraunts.map((restraunt) => {
-                        return <RestrauntCard {...restraunt.info} key={restraunt.info.id} />
-                    })
-                }
+                {Array.isArray(restraunts) && restraunts.length > 0 ? (
+                    restraunts.map((restraunt) => (
+                        <RestrauntCard {...restraunt.info} key={restraunt.info.id} />
+                    ))
+                ) : (
+                    <p>No restaurants found</p> // Fallback for empty or invalid data
+                )}
 
             </div>
         </>
