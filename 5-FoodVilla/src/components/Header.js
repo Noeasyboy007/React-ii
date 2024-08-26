@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import logo from '../assets/logo.jpg'
 
 // const LoggedInUser = () => {
 //     //API call to authenticated user
@@ -9,7 +10,9 @@ export const Title = () => (
     <a href="/">
         {/* <img className="logo" src="https://yt3.ggpht.com/ytc/AKedOLSpK3T_2RxkMYb-pk9oENQB0NvYpeOdXRgQe8i5=s800-c-k-c0x00ffffff-no-rj" alt="Not found"
         /> */}
-        <img className="logo" src="https://blog.indifi.com/wp-content/uploads/2019/12/Cloud-Kitchen-500x292.jpg" alt="Not found"
+        {/* <img className="logo" src="https://blog.indifi.com/wp-content/uploads/2019/12/Cloud-Kitchen-500x292.jpg" alt="Not found"
+        /> */}
+        <img className="logo" src={logo} alt="Not found"
         />
     </a>
 );

@@ -40,7 +40,7 @@
     padding: 10px;
 }
 
-/* ********************************************** */
+/* ********************Skeliton************************** */
 .skeleton-container {
     display: flex;
     flex-wrap: wrap;
@@ -91,4 +91,22 @@
     background: linear-gradient(90deg, #e0e0e0 25%, #f0f0f0 50%, #e0e0e0 75%);
     background-size: 400% 100%;
     animation: shimmer 1.2s ease-in-out infinite;
+}
+
+/* *******************Error page*************************** */
+.center-content {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.center-content img {
+    width: 50vh;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.center-content h1 {
+    font-family: Arial, sans-serif;
+    color: #000000;
+    font-size: 24px;
 }
