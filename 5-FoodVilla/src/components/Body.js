@@ -1,6 +1,7 @@
 import RestrauntCard from "./RestrauntCard";
 import { useState, useEffect } from "react"
 import SkelitonUi from './SkelitonUi';
+import { Link } from "react-router-dom";
 
 //filter functions
 function filterData(searchInput, restraunts) {
@@ -66,7 +67,10 @@ const Body = () => {
             <div className="restraunt-list">
                 {Array.isArray(filterRestraunts) && filterRestraunts.length > 0 ? (
                     filterRestraunts.map((restraunt) => (
-                        <RestrauntCard {...restraunt.info} key={restraunt.info.id} />
+                        <Link to={"/restraunt/" + restraunt.info.id}>
+                            <RestrauntCard {...restraunt.info}
+                                key={restraunt.info.id} />
+                        </Link>
                     ))
                 ) : (
                     <p>No restaurants found</p> // Fallback for empty or invalid data
