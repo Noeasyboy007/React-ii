@@ -1,4 +1,4 @@
-import { restrauntList, IMG_URL } from "./config"
+import { restrauntList, IMG_URL } from "../Constant"
 
 restrauntList
 
@@ -11,7 +11,7 @@ const RestrauntCard = ({ cloudinaryImageId, name, cuisines, areaName, costForTwo
             <h2>{name}</h2>
             <h3>{cuisines.join(", ")}</h3>
             <h4>{areaName}</h4>
-            <h4>{}</h4>
+            <h4>{ }</h4>
             <h4>{costForTwo}</h4>
         </div>
     )

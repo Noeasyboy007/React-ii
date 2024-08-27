@@ -8,7 +8,7 @@ import { Link } from 'react-router-dom';
 
 export const Title = () => (
     <a href="/">
-        <img className="logo" src="https://yt3.googleusercontent.com/ctdf57M4HvvCJDzxNI0P2wLWnuVQdnScOjeR3iqybh3sdrPYLxPyPiua4EgLBtySWwBCxQkK-A=s900-c-k-c0x00ffffff-no-rj" alt="Not found"
+        <img className="logo" src="https://5.imimg.com/data5/SELLER/Default/2023/7/324805815/WL/BJ/AZ/34859706/touch2success-500x500.png"
         />
         {/* <img className="logo" src="https://blog.indifi.com/wp-content/uploads/2019/12/Cloud-Kitchen-500x292.jpg" alt="Not found"
         /> */}
