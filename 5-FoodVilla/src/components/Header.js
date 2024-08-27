@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import logo from '../assets/logo.jpg'
+import { Link } from 'react-router-dom';
 
 // const LoggedInUser = () => {
 //     //API call to authenticated user
@@ -8,12 +8,12 @@ import logo from '../assets/logo.jpg'
 
 export const Title = () => (
     <a href="/">
-        {/* <img className="logo" src="https://yt3.ggpht.com/ytc/AKedOLSpK3T_2RxkMYb-pk9oENQB0NvYpeOdXRgQe8i5=s800-c-k-c0x00ffffff-no-rj" alt="Not found"
-        /> */}
+        <img className="logo" src="https://yt3.googleusercontent.com/ctdf57M4HvvCJDzxNI0P2wLWnuVQdnScOjeR3iqybh3sdrPYLxPyPiua4EgLBtySWwBCxQkK-A=s900-c-k-c0x00ffffff-no-rj" alt="Not found"
+        />
         {/* <img className="logo" src="https://blog.indifi.com/wp-content/uploads/2019/12/Cloud-Kitchen-500x292.jpg" alt="Not found"
         /> */}
-        <img className="logo" src={logo} alt="Not found"
-        />
+        {/* <img className="logo" src={logo} alt="Not found"
+        /> */}
     </a>
 );
 
@@ -26,9 +26,18 @@ const Header = () => {
             <Title />
             <div className="nav-items" >
                 <ul>
-                    <li>Home</li>
-                    <li>About</li>
-                    <li>Contact</li>
+                    <Link to="/">
+                        <li>Home</li>
+                    </Link>
+
+                    <Link to="/about">
+                        <li>About</li>
+                    </Link>
+
+                    <Link to="/contact">
+                        <li>Contact</li>
+                    </Link>
+
                     <li>Cart</li>
                 </ul>
             </div>

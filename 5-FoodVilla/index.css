@@ -3,11 +3,13 @@
     justify-content: space-between;
     margin: 10px;
     border: 1px solid black;
+    
 }
 
 .nav-items>ul {
     list-style: none;
     display: flex;
+    
 }
 
 .nav-items>ul>li {
