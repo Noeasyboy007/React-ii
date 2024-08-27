@@ -47,8 +47,9 @@ const appRouter = createBrowserRouter([
         errorElement: <Error />
       },
       {
-        path: "restraunt/:id",
-        element: <RestrauntMenu />
+        path: "restraunt/:resId",
+        element: <RestrauntMenu />,
+        errorElement: <Error />
       }
     ],
   },

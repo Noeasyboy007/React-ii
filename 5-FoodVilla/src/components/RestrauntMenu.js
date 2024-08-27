@@ -5,8 +5,8 @@ import { IMG_URL } from "../Constant.js";
 import MenuLoadingShimmer from './MenuLoadingShimmer';
 
 const RestrauntMenu = () => {
-    const { resId } = useParams();
-    console.log(resId);
+    const { resId } = useParams(); // Extract resId from URL
+    console.log("Restaurant ID:", resId);
 
     const [restraunt, setRestraunt] = useState([])
     const [menuItems, setMenuItems] = useState([]); // State for storing menu items
@@ -17,15 +17,15 @@ const RestrauntMenu = () => {
 
     // Fetch data from API endpoint to RestrauntMenu Item or restraunt Details
     async function getRestrauntInfo() {
-        const data = await fetch("https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=22.5743545&lng=88.3628734&restaurantId=10522&catalog_qa=undefined&submitAction=ENTER")
+        const data = await fetch(`https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=22.5743545&lng=88.3628734&restaurantId=${resId}&catalog_qa=undefined&submitAction=ENTER`)
 
         // Set restaurant details
         const json = await data.json();
         console.log(json);
-        setRestraunt(json.data.cards[2].card.card.info)
+        setRestraunt(json?.data?.cards[2]?.card?.card?.info)
 
         // Extract menu items
-        const items = json.data.cards[4].groupedCard.cardGroupMap.REGULAR.cards[1].card.card.itemCards;
+        const items = json?.data?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards[1]?.card?.card?.itemCards;
         setMenuItems(items.map(item => item.card.info)); // Set menu items
     }
 
