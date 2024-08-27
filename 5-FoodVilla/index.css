@@ -112,3 +112,119 @@
     color: #000000;
     font-size: 24px;
 }
+/* ************************Menu Loading Shimmer Ui**************************** */
+/* Shimmer effect animation */
+@keyframes shimmer {
+    0% {
+      background-position: -100%;
+    }
+    100% {
+      background-position: 100%;
+    }
+  }
+  
+  /* Shimmer page container */
+  .shimmer-page-container {
+    padding: 16px;
+  }
+  
+  /* Shimmer header (restaurant details section) */
+  .shimmer-header {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 32px;
+  }
+  
+  .shimmer-banner {
+    height: 200px;
+    background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+    background-size: 200% 100%;
+    animation: shimmer 1.5s infinite linear;
+    border-radius: 8px;
+  }
+  
+  .shimmer-restaurant-details {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  /* Shimmer lines in the header */
+  .shimmer-line {
+    height: 16px;
+    border-radius: 8px;
+    background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+    background-size: 200% 100%;
+    animation: shimmer 1.5s infinite linear;
+  }
+  
+  .shimmer-title {
+    width: 50%;
+  }
+  
+  .shimmer-description {
+    width: 70%;
+  }
+  
+  .shimmer-location {
+    width: 40%;
+  }
+  
+  .shimmer-rating {
+    width: 30%;
+  }
+  
+  /* Shimmer menu container */
+  .shimmer-menu-container {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  
+  /* Shimmer menu item */
+  .shimmer-item {
+    display: flex;
+    gap: 16px;
+    padding: 16px;
+    background-color: #f0f0f0;
+    border-radius: 8px;
+  }
+  
+  /* Shimmer image for menu item */
+  .shimmer-image {
+    width: 80px;
+    height: 80px;
+    border-radius: 8px;
+    background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+    background-size: 200% 100%;
+    animation: shimmer 1.5s infinite linear;
+  }
+  
+  /* Shimmer details for menu item */
+  .shimmer-details {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  /* Shimmer lines for menu item */
+  .shimmer-title {
+    width: 60%;
+  }
+  
+  .shimmer-description {
+    width: 80%;
+    height: 12px;
+  }
+  
+  .shimmer-price {
+    width: 40%;
+  }
+  
+
+/* ************************Menu**************************** */
+.menu {
+    display: flex;
+}
