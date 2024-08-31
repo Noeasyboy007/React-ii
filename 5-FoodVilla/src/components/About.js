@@ -25,13 +25,20 @@ import { Component } from "react";
 class About extends Component {
     constructor(props) {
         super(props);
+        this.state = {
+            userInfo: {
+                name: "Dummy Name",
+                location: "Dummy Location",
+                
+            }
+        }
+
         //Constructor called frist
         console.log("parent-constructor called");
 
     }
-    async componentDidMount() {
+    componentDidMount() {
         //Called after render
-        const data = await fetch("https://api.github.com/users/Noeasyboy007")
         console.log("parent-ComponentDidMount");
 
     }
@@ -44,7 +51,7 @@ class About extends Component {
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos atque repudiandae sit earum vitae adipisci inventore non, nihil tempore culpa.</p>
                 {/* <Outlet /> */}
                 <ProfileClassComponents name={"Frist Child"} xyz="abc" />
-                <ProfileClassComponents name={"Second Child"} yxz="abc" />
+                {/* <ProfileClassComponents name={"Second Child"} yxz="abc" /> */}
                 {/* <ProfileFunctionalComponents name={"Aritra"} /> */}
 
             </div>
