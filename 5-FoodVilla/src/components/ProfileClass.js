@@ -1,11 +1,14 @@
 import React from "react"
 
-class Profile extends React.Component {
-    render(){
-        return <div>
-            <h1>Profile classs Component</h1>
-        </div>
+class ProfileClassComponents extends React.Component {
+    render() {
+        return (
+            <div>
+                <h1>Profile classs Component</h1>
+                <h2>Name: {this.props.name}</h2>
+            </div>
+        )
     }
 }
 
-export default Profile;
+export default ProfileClassComponents;

@@ -1,5 +1,6 @@
 // import { Outlet } from "react-router-dom";
-import Profile from "./ProfileClass";
+import ProfileClassComponents from "./ProfileClass";
+import ProfileFunctionalComponents from './Profile';
 
 const About = () => {
     return (
@@ -9,7 +10,9 @@ const About = () => {
                 <h1>About page</h1>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos atque repudiandae sit earum vitae adipisci inventore non, nihil tempore culpa.</p>
                 {/* <Outlet /> */}
-                <Profile />
+                <ProfileClassComponents name={"Aritra"} />
+                <ProfileFunctionalComponents name={"Aritra"} />
+
             </div>
 
         </>
