@@ -2,13 +2,13 @@ import RestrauntCard from "./RestrauntCard";
 import { useState, useEffect } from "react"
 import SkelitonUi from './SkelitonUi';
 import { Link } from "react-router-dom";
-
+import { filterData } from "../utils/helper";
 //filter functions
-function filterData(searchInput, restraunts) {
-    return restraunts.filter((restraunt) =>
-        restraunt?.info.name.toLowerCase().includes(searchInput.toLowerCase())
-    );
-}
+// function filterData(searchInput, restraunts) {
+//     return restraunts.filter((restraunt) =>
+//         restraunt?.info.name.toLowerCase().includes(searchInput.toLowerCase())
+//     );
+// }
 
 // Body component
 const Body = () => {
