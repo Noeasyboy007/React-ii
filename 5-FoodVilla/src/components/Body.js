@@ -1,14 +1,8 @@
 import RestrauntCard from "./RestrauntCard";
 import { useState, useEffect } from "react"
-import SkelitonUi from './SkelitonUi';
+import SkelitonUi from '../skeliton/SkelitonUi';
 import { Link } from "react-router-dom";
-import { filterData } from "../utils/helper";
-//filter functions
-// function filterData(searchInput, restraunts) {
-//     return restraunts.filter((restraunt) =>
-//         restraunt?.info.name.toLowerCase().includes(searchInput.toLowerCase())
-//     );
-// }
+import { filterData } from "../utils/restrauntFilter";
 
 // Body component
 const Body = () => {
@@ -24,7 +18,6 @@ const Body = () => {
 
     }, [])
 
-
     // Fetch data from API (Function)
     async function getRestaurants() {
         const data = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=22.5743545&lng=88.3628734&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING")
@@ -34,8 +27,7 @@ const Body = () => {
         setFilterRestraunt(json.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants)
 
     }
-
-    console.log("render");
+    // console.log("render");
 
     // not reder component (Early return)
     if (!allRestraunts) return null;
@@ -64,6 +56,7 @@ const Body = () => {
                     }}
                 >Search</button>
             </div>
+
             <div className="restraunt-list">
                 {Array.isArray(filterRestraunts) && filterRestraunts.length > 0 ? (
                     filterRestraunts.map((restraunt) => (

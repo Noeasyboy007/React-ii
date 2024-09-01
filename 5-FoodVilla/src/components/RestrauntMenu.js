@@ -1,61 +1,27 @@
 import { useParams } from "react-router-dom";
-import { useEffect, useState } from 'react';
 import { IMG_URL } from "../Constant.js";
-import MenuLoadingShimmer from './MenuLoadingShimmer';
+import useRestraunt from "../hooks/useRestraunt.js";
+import MenuLoadingShimmer from './../skeliton/MenuLoadingShimmer';
+
 
 const RestrauntMenu = () => {
     const { resId } = useParams(); // Extract resId from URL
-    console.log("Restaurant ID:", resId);
+    const { restraunt, menuItems, loading, error } = useRestraunt(resId); // Use the custom hook
 
-    const [restraunt, setRestraunt] = useState(null);
-    const [menuItems, setMenuItems] = useState([]); // State for storing menu items
-    const [loading, setLoading] = useState(true); // State for loading
-    const [error, setError] = useState(null); // State for error handling
-
-    useEffect(() => {
-        getRestrauntInfo();
-    }, [resId]);
-
-    // Fetch data from API endpoint to RestrauntMenu Item or restraunt Details
-    async function getRestrauntInfo() {
-        try {
-            const response = await fetch(`https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=22.5743545&lng=88.3628734&restaurantId=${resId}&catalog_qa=undefined&submitAction=ENTER`);
-
-            if (!response.ok) {
-                throw new Error("Failed to fetch restaurant data");
-            }
-
-            const json = await response.json();
-            console.log(json);
-
-            const restaurantInfo = json?.data?.cards[2]?.card?.card?.info;
-            const items = json?.data?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards[1]?.card?.card?.itemCards?.map(item => item.card.info);
-
-            if (!restaurantInfo || !items) {
-                throw new Error("Invalid restaurant ID or data not available");
-            }
-
-            setRestraunt(restaurantInfo);
-            setMenuItems(items);
-        } catch (err) {
-            setError(err.message); // Set error message
-            console.log(err.message);
-            
-        } finally {
-            setLoading(false); // Always set loading to false when request is complete
-        }
-    }
-
+    // Conditional Rendaring
     if (loading) {
         return <MenuLoadingShimmer />; // Show loading shimmer while fetching data
     }
 
     if (error) {
-        return <div>Error: {error}</div>; // Show error message if any error occurs
+        return <Error message={error} />; // Show Error component if any error occurs
     }
+
 
     return (
         <div className="menu">
+
+            {/* Restraunt name */}
             <div>
                 <h1>Restaurant ID: {resId}</h1>
                 <h2>{restraunt.name}</h2>

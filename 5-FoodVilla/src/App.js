@@ -6,7 +6,7 @@ import Body from './components/Body.js';
 import Footer from './components/Footer.js';
 import About from './components/About.js';
 import Contact from './components/Contact.js';
-import Error from './components/Error.js';
+import Error from './utils/Error.js';
 import RestrauntMenu from './components/RestrauntMenu.js';
 import Profile from './components/Profile';
 
