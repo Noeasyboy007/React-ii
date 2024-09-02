@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { lazy } from 'react';
 import ReactDOM from 'react-dom/client';
 //Default Import
 import Header from './components/Header.js';
@@ -12,6 +12,9 @@ import Profile from './components/Profile';
 import Cart from './components/Cart';
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 
+
+// LAzy  Loadiing Component
+const InstaDelivery = lazy(() => import('./components/InstaDelivery.js'))
 
 //AppLayout component
 const AppLayout = () => {
@@ -63,6 +66,10 @@ const appRouter = createBrowserRouter([
         path: "restraunt/:resId",
         element: <RestrauntMenu />,
         errorElement: <Error />
+      },
+      {
+        path: "/instadelivery",
+        element: <InstaDelivery />,
       }
     ],
   },

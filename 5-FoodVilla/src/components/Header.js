@@ -23,7 +23,14 @@ const Header = () => {
                     </Link>
 
                     <Link to="/cart">
-                    <li>Cart</li></Link>
+                        <li>Cart</li>
+                        </Link>
+
+                    <Link to="/instadelivery">
+                        <li>
+                            Insta Delivery
+                        </li>
+                    </Link>
                 </ul>
             </div>
 
