@@ -1,7 +1,7 @@
 import { useParams } from "react-router-dom";
-import { IMG_URL } from "../Constant.js";
 import useRestraunt from "../hooks/useRestraunt.js";
 import MenuLoadingShimmer from './../skeliton/MenuLoadingShimmer';
+import { IMG_URL } from "../constant/Constant.js";
 
 
 const RestrauntMenu = () => {

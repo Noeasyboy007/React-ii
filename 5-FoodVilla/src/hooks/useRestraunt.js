@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { FETCH_MENUURL } from '../Constant';
+import { FETCH_MENUURL } from '../constant/Constant';
 
 const useRestraunt = (resId) => {
     const [restraunt, setRestraunt] = useState(null);

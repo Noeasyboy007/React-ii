@@ -3,7 +3,7 @@ import { useState, useEffect } from "react"
 import SkelitonUi from '../skeliton/SkelitonUi';
 import { Link } from "react-router-dom";
 import { filterData } from "../utils/restrauntFilter";
-import { FETCH_RESTRAUNT_URL } from "../Constant";
+import { FETCH_RESTRAUNT_URL } from "../constant/Constant";
 
 // Body component
 const Body = () => {
@@ -31,8 +31,11 @@ const Body = () => {
     if (!allRestraunts) return null;
 
     // Conditional Rendering
-    return (allRestraunts.length === 0) ? <SkelitonUi /> : (
-        <>
+    return (
+
+        allRestraunts.length === 0) ? <SkelitonUi /> : (
+        <> <div className="body">
+
             <div className="search-container">
                 <input
                     type="text"
@@ -65,6 +68,7 @@ const Body = () => {
                 )}
             </div>
 
+        </div>
         </>
     )
 };

@@ -1,4 +1,4 @@
-import { restrauntList, IMG_URL } from "../Constant"
+import { restrauntList, IMG_URL } from "../constant/Constant"
 
 restrauntList
 
