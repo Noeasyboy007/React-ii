@@ -9,10 +9,11 @@ import Error from './utils/Error.js';
 import RestrauntMenu from './components/RestrauntMenu.js';
 import Profile from './components/Profile';
 import Cart from './components/Cart';
+import SkeletonUi from './skeliton/SkelitonUi.js';
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 
 
-// LAzy  Loadiing Component
+// Lazy  Loadiing Component
 const InstaDelivery = lazy(() => import('./components/InstaDelivery.js'))
 
 //AppLayout component
