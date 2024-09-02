@@ -1297,156 +1297,162 @@ export const restrauntList = [
             "type": "WEBLINK"
         }
     },
-    // {
-    //     "info": {
-    //         "id": "26533",
-    //         "name": "6 Ballygunge Place",
-    //         "cloudinaryImageId": "agpdyb3uwlik0r47be6o",
-    //         "locality": "Near Mahadevi Birla Shishu Vihar",
-    //         "areaName": "Central Kolkata",
-    //         "costForTwo": "₹800 for two",
-    //         "cuisines": [
-    //             "Bengali"
-    //         ],
-    //         "avgRating": 4.5,
-    //         "parentId": "1243",
-    //         "avgRatingString": "4.5",
-    //         "totalRatingsString": "1K+",
-    //         "sla": {
-    //             "deliveryTime": 46,
-    //             "lastMileTravel": 8,
-    //             "serviceability": "SERVICEABLE",
-    //             "slaString": "45-50 mins",
-    //             "lastMileTravelString": "8.0 km",
-    //             "iconType": "ICON_TYPE_EMPTY"
-    //         },
-    //         "availability": {
-    //             "nextCloseTime": "2024-08-18 03:30:00",
-    //             "opened": true
-    //         },
-    //         "badges": {},
-    //         "isOpen": true,
-    //         "type": "F",
-    //         "badgesV2": {
-    //             "entityBadges": {
-    //                 "imageBased": {},
-    //                 "textBased": {},
-    //                 "textExtendedBadges": {}
-    //             }
-    //         },
-    //         "aggregatedDiscountInfoV3": {
-    //             "header": "40% OFF",
-    //             "subHeader": "UPTO ₹80"
-    //         },
-    //         "differentiatedUi": {
-    //             "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
-    //             "differentiatedUiMediaDetails": {
-    //                 "mediaType": "ADS_MEDIA_ENUM_IMAGE",
-    //                 "lottie": {},
-    //                 "video": {}
-    //             }
-    //         },
-    //         "reviewsSummary": {},
-    //         "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
-    //         "restaurantOfferPresentationInfo": {},
-    //         "externalRatings": {
-    //             "aggregatedRating": {
-    //                 "rating": "--"
-    //             }
-    //         },
-    //         "ratingsDisplayPreference": "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY"
-    //     },
-    //     "analytics": {},
-    //     "cta": {
-    //         "link": "https://www.swiggy.com/restaurants/6-ballygunge-place-near-mahadevi-birla-shishu-vihar-central-kolkata-kolkata-26533",
-    //         "type": "WEBLINK"
-    //     }
-    // },
-    // {
-    //     "info": {
-    //         "id": "834779",
-    //         "name": "Picante - Mexican by Nomad",
-    //         "cloudinaryImageId": "RX_THUMBNAIL/IMAGES/VENDOR/2024/8/13/c1d1aafc-4350-4fee-a11a-b4bf83c10ac7_834779.jpg",
-    //         "locality": "KALINDI HOUSING ESTATE",
-    //         "areaName": "SOUTH DUM DUM",
-    //         "costForTwo": "₹500 for two",
-    //         "cuisines": [
-    //             "Salads",
-    //             "Healthy Food"
-    //         ],
-    //         "avgRating": 4,
-    //         "parentId": "550225",
-    //         "avgRatingString": "4.0",
-    //         "totalRatingsString": "20+",
-    //         "sla": {
-    //             "deliveryTime": 44,
-    //             "lastMileTravel": 7.1,
-    //             "serviceability": "SERVICEABLE",
-    //             "slaString": "40-45 mins",
-    //             "lastMileTravelString": "7.1 km",
-    //             "iconType": "ICON_TYPE_EMPTY"
-    //         },
-    //         "availability": {
-    //             "nextCloseTime": "2024-08-18 04:00:00",
-    //             "opened": true
-    //         },
-    //         "badges": {
-    //             "imageBadges": [
-    //                 {
-    //                     "imageId": "newg.png",
-    //                     "description": "Gourmet"
-    //                 }
-    //             ]
-    //         },
-    //         "isOpen": true,
-    //         "type": "F",
-    //         "badgesV2": {
-    //             "entityBadges": {
-    //                 "imageBased": {
-    //                     "badgeObject": [
-    //                         {
-    //                             "attributes": {
-    //                                 "description": "Gourmet",
-    //                                 "imageId": "newg.png"
-    //                             }
-    //                         }
-    //                     ]
-    //                 },
-    //                 "textBased": {},
-    //                 "textExtendedBadges": {}
-    //             }
-    //         },
-    //         "aggregatedDiscountInfoV3": {
-    //             "header": "₹50 OFF",
-    //             "subHeader": "ABOVE ₹299",
-    //             "discountTag": "FLAT DEAL"
-    //         },
-    //         "differentiatedUi": {
-    //             "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
-    //             "differentiatedUiMediaDetails": {
-    //                 "mediaType": "ADS_MEDIA_ENUM_IMAGE",
-    //                 "lottie": {},
-    //                 "video": {}
-    //             }
-    //         },
-    //         "reviewsSummary": {},
-    //         "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
-    //         "isNewlyOnboarded": true,
-    //         "restaurantOfferPresentationInfo": {},
-    //         "externalRatings": {
-    //             "aggregatedRating": {
-    //                 "rating": "--"
-    //             }
-    //         },
-    //         "ratingsDisplayPreference": "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY"
-    //     },
-    //     "analytics": {},
-    //     "cta": {
-    //         "link": "https://www.swiggy.com/restaurants/picante-mexican-by-nomad-kalindi-housing-estate-south-dum-dum-kolkata-834779",
-    //         "type": "WEBLINK"
-    //     }
-    // }
+    {
+        "info": {
+            "id": "26533",
+            "name": "6 Ballygunge Place",
+            "cloudinaryImageId": "agpdyb3uwlik0r47be6o",
+            "locality": "Near Mahadevi Birla Shishu Vihar",
+            "areaName": "Central Kolkata",
+            "costForTwo": "₹800 for two",
+            "cuisines": [
+                "Bengali"
+            ],
+            "avgRating": 4.5,
+            "parentId": "1243",
+            "avgRatingString": "4.5",
+            "totalRatingsString": "1K+",
+            "sla": {
+                "deliveryTime": 46,
+                "lastMileTravel": 8,
+                "serviceability": "SERVICEABLE",
+                "slaString": "45-50 mins",
+                "lastMileTravelString": "8.0 km",
+                "iconType": "ICON_TYPE_EMPTY"
+            },
+            "availability": {
+                "nextCloseTime": "2024-08-18 03:30:00",
+                "opened": true
+            },
+            "badges": {},
+            "isOpen": true,
+            "type": "F",
+            "badgesV2": {
+                "entityBadges": {
+                    "imageBased": {},
+                    "textBased": {},
+                    "textExtendedBadges": {}
+                }
+            },
+            "aggregatedDiscountInfoV3": {
+                "header": "40% OFF",
+                "subHeader": "UPTO ₹80"
+            },
+            "differentiatedUi": {
+                "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+                "differentiatedUiMediaDetails": {
+                    "mediaType": "ADS_MEDIA_ENUM_IMAGE",
+                    "lottie": {},
+                    "video": {}
+                }
+            },
+            "reviewsSummary": {},
+            "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+            "restaurantOfferPresentationInfo": {},
+            "externalRatings": {
+                "aggregatedRating": {
+                    "rating": "--"
+                }
+            },
+            "ratingsDisplayPreference": "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY"
+        },
+        "analytics": {},
+        "cta": {
+            "link": "https://www.swiggy.com/restaurants/6-ballygunge-place-near-mahadevi-birla-shishu-vihar-central-kolkata-kolkata-26533",
+            "type": "WEBLINK"
+        }
+    },
+    {
+        "info": {
+            "id": "834779",
+            "name": "Picante - Mexican by Nomad",
+            "cloudinaryImageId": "RX_THUMBNAIL/IMAGES/VENDOR/2024/8/13/c1d1aafc-4350-4fee-a11a-b4bf83c10ac7_834779.jpg",
+            "locality": "KALINDI HOUSING ESTATE",
+            "areaName": "SOUTH DUM DUM",
+            "costForTwo": "₹500 for two",
+            "cuisines": [
+                "Salads",
+                "Healthy Food"
+            ],
+            "avgRating": 4,
+            "parentId": "550225",
+            "avgRatingString": "4.0",
+            "totalRatingsString": "20+",
+            "sla": {
+                "deliveryTime": 44,
+                "lastMileTravel": 7.1,
+                "serviceability": "SERVICEABLE",
+                "slaString": "40-45 mins",
+                "lastMileTravelString": "7.1 km",
+                "iconType": "ICON_TYPE_EMPTY"
+            },
+            "availability": {
+                "nextCloseTime": "2024-08-18 04:00:00",
+                "opened": true
+            },
+            "badges": {
+                "imageBadges": [
+                    {
+                        "imageId": "newg.png",
+                        "description": "Gourmet"
+                    }
+                ]
+            },
+            "isOpen": true,
+            "type": "F",
+            "badgesV2": {
+                "entityBadges": {
+                    "imageBased": {
+                        "badgeObject": [
+                            {
+                                "attributes": {
+                                    "description": "Gourmet",
+                                    "imageId": "newg.png"
+                                }
+                            }
+                        ]
+                    },
+                    "textBased": {},
+                    "textExtendedBadges": {}
+                }
+            },
+            "aggregatedDiscountInfoV3": {
+                "header": "₹50 OFF",
+                "subHeader": "ABOVE ₹299",
+                "discountTag": "FLAT DEAL"
+            },
+            "differentiatedUi": {
+                "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+                "differentiatedUiMediaDetails": {
+                    "mediaType": "ADS_MEDIA_ENUM_IMAGE",
+                    "lottie": {},
+                    "video": {}
+                }
+            },
+            "reviewsSummary": {},
+            "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+            "isNewlyOnboarded": true,
+            "restaurantOfferPresentationInfo": {},
+            "externalRatings": {
+                "aggregatedRating": {
+                    "rating": "--"
+                }
+            },
+            "ratingsDisplayPreference": "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY"
+        },
+        "analytics": {},
+        "cta": {
+            "link": "https://www.swiggy.com/restaurants/picante-mexican-by-nomad-kalindi-housing-estate-south-dum-dum-kolkata-834779",
+            "type": "WEBLINK"
+        }
+    }
 ]
 
 // IMG_URL
 export const IMG_URL = "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/"
+
+export const FETCH_RESTRAUNT_URL ="https://www.swiggy.com/dapi/restaurants/list/v5?lat=22.5743545&lng=88.3628734&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
+
+export const FETCH_MENUURL="https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=22.5743545&lng=88.3628734&restaurantId="
+
+// ${resId}&catalog_qa=undefined&submitAction=ENTER

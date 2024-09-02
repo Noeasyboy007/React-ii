@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { FETCH_MENUURL } from '../Constant';
 
 const useRestraunt = (resId) => {
     const [restraunt, setRestraunt] = useState(null);
@@ -14,7 +15,7 @@ const useRestraunt = (resId) => {
     // Fetch data from API endpoint to RestrauntMenu Item or restraunt Details
     async function getRestrauntInfo() {
         try {
-            const response = await fetch(`https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=22.5743545&lng=88.3628734&restaurantId=${resId}&catalog_qa=undefined&submitAction=ENTER`);
+            const response = await fetch(FETCH_MENUURL + resId);
 
             if (!response.ok) {
                 throw new Error("Failed to fetch restaurant data");

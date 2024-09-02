@@ -3,6 +3,7 @@ import { useState, useEffect } from "react"
 import SkelitonUi from '../skeliton/SkelitonUi';
 import { Link } from "react-router-dom";
 import { filterData } from "../utils/restrauntFilter";
+import { FETCH_RESTRAUNT_URL } from "../Constant";
 
 // Body component
 const Body = () => {
@@ -11,23 +12,20 @@ const Body = () => {
     const [filterRestraunts, setFilterRestraunt] = useState([]); // original list
     const [searchInput, setSearchInput] = useState("");
 
+    //Get Data from API call
     useEffect(() => {
-        //Get Data from API call
         getRestaurants();
-        // console.log("useEffect Called");
-
     }, [])
 
     // Fetch data from API (Function)
     async function getRestaurants() {
-        const data = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=22.5743545&lng=88.3628734&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING")
+        const data = await fetch(FETCH_RESTRAUNT_URL)
         const json = await data.json();
         console.log(json);
         setAllRestraunt(json.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants)
         setFilterRestraunt(json.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants)
 
     }
-    // console.log("render");
 
     // not reder component (Early return)
     if (!allRestraunts) return null;
@@ -58,18 +56,15 @@ const Body = () => {
             </div>
 
             <div className="restraunt-list">
-                {Array.isArray(filterRestraunts) && filterRestraunts.length > 0 ? (
+                {Array.isArray(filterRestraunts) && filterRestraunts.length > 0 && (
                     filterRestraunts.map((restraunt) => (
-                        <Link to={"/restraunt/" + restraunt.info.id}>
-                            <RestrauntCard {...restraunt.info}
-                                key={restraunt.info.id} />
+                        <Link to={"/restraunt/" + restraunt.info.id} key={restraunt.info.id}>
+                            <RestrauntCard {...restraunt.info} />
                         </Link>
                     ))
-                ) : (
-                    <p>No restaurants found</p> // Fallback for empty or invalid data
                 )}
-
             </div>
+
         </>
     )
 };

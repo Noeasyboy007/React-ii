@@ -1,10 +1,6 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 
-// const LoggedInUser = () => {
-//     //API call to authenticated user
-//     return false;
-// }
 
 export const Title = () => (
     <a href="/">
