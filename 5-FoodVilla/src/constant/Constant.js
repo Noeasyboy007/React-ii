@@ -1451,8 +1451,16 @@ export const restrauntList = [
 // IMG_URL
 export const IMG_URL = "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/"
 
-export const FETCH_RESTRAUNT_URL ="https://www.swiggy.com/dapi/restaurants/list/v5?lat=22.5743545&lng=88.3628734&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
+export const FETCH_RESTRAUNT_URL = "https://www.swiggy.com/dapi/restaurants/list/v5?lat=22.5743545&lng=88.3628734&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
 
-export const FETCH_MENUURL="https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=22.5743545&lng=88.3628734&restaurantId="
+export const FETCH_MENUURL = "https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=22.5743545&lng=88.3628734&restaurantId="
+
+
+export const Title = () => (
+    <a href="/">
+        <img className="logo" src="https://5.imimg.com/data5/SELLER/Default/2023/7/324805815/WL/BJ/AZ/34859706/touch2success-500x500.png"
+        />
+    </a>
+);
 
 // ${resId}&catalog_qa=undefined&submitAction=ENTER

@@ -306,24 +306,25 @@ body {
 /* Responsive Design */
 @media (max-width: 768px) {
   .header {
-      flex-direction: column;
-      padding: 15px 20px;
+    flex-direction: column;
+    padding: 15px 20px;
   }
 
   .nav-items ul {
-      flex-direction: column;
-      align-items: center;
-      margin-top: 15px;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 15px;
   }
 
   .nav-items ul li {
-      margin: 10px 0;
+    margin: 10px 0;
   }
 
   .header button {
-      margin-top: 15px;
+    margin-top: 15px;
   }
 }
+
 /* ***********************Footer***************************************** */
 /* Footer Container */
 .footer {
@@ -352,7 +353,7 @@ body {
   margin: 15px;
 }
 
-.footer-section h2, 
+.footer-section h2,
 .footer-section h3 {
   font-size: 1.5rem;
   margin-bottom: 20px;
@@ -401,12 +402,12 @@ body {
 /* Responsive Footer */
 @media (max-width: 768px) {
   .footer-content {
-      flex-direction: column;
-      align-items: center;
+    flex-direction: column;
+    align-items: center;
   }
 
   .footer-section {
-      margin: 10px 0;
+    margin: 10px 0;
   }
 }
 
@@ -418,7 +419,8 @@ body {
   justify-content: center;
   height: 100vh;
   text-align: center;
-  background-color: #f2f2f2; /* Light grey background */
+  background-color: #f2f2f2;
+  /* Light grey background */
   padding: 20px;
   box-sizing: border-box;
 }
@@ -431,13 +433,15 @@ body {
 
 .center-content h1 {
   font-size: 2rem;
-  color: #ff4d4d; /* Red color for error */
+  color: #ff4d4d;
+  /* Red color for error */
   margin: 10px 0;
 }
 
 .center-content h2 {
   font-size: 1.2rem;
-  color: #333; /* Dark grey color for text */
+  color: #333;
+  /* Dark grey color for text */
 }
 
 
@@ -587,7 +591,7 @@ body {
 }
 
 /* Restaurant Information */
-.menu > div:first-child {
+.menu>div:first-child {
   text-align: center;
   margin-bottom: 40px;
 }
@@ -619,7 +623,7 @@ body {
 }
 
 /* Menu Items */
-.menu > div:last-child {
+.menu>div:last-child {
   margin-top: 40px;
 }
 
@@ -677,24 +681,50 @@ body {
 /* Responsive design */
 @media (max-width: 768px) {
   .menu {
-      padding: 15px;
+    padding: 15px;
   }
 
   .menu h1,
   .menu h2,
   .menu h3 {
-      font-size: 1.5rem;
+    font-size: 1.5rem;
   }
 
   .menu li {
-      padding: 15px;
+    padding: 15px;
   }
 
   .menu h3 {
-      font-size: 1.4rem;
+    font-size: 1.4rem;
   }
 
   .menu p {
-      font-size: 0.9rem;
+    font-size: 0.9rem;
   }
+}
+
+/* ********************offline*************************** */
+.offline {
+  background-color: #ffcccb;
+  /* Light red background to indicate an error/warning */
+  color: #a94442;
+  /* Dark red text for contrast */
+  border: 1px solid #a94442;
+  /* Border to define the message box */
+  padding: 15px;
+  /* Add some padding for spacing */
+  text-align: center;
+  /* Center-align the text */
+  font-size: 18px;
+  /* Slightly larger font size for readability */
+  font-family: Arial, sans-serif;
+  /* Clean, readable font */
+  border-radius: 5px;
+  /* Rounded corners for a smoother look */
+  margin: 20px auto;
+  /* Center the box with some margin */
+  max-width: 500px;
+  /* Limit the width of the message box */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  /* Subtle shadow for depth */
 }

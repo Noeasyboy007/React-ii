@@ -12,8 +12,13 @@ const Body = () => {
     const [searchInput, setSearchInput] = useState("");
     const { allRestraunts, filterRestraunts, setFilterRestraunt } = useBody();
 
+    const offline = false;
+    if (offline) {
+        return <div className="offline">No internet connection. Please check your internet connection and try again.</div>
+    }
+
     return (
-        
+
         // Conditional Rendering
         allRestraunts.length === 0) ? <SkelitonUi /> : (
         <> <div className="body">
