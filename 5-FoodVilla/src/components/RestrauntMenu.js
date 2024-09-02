@@ -22,7 +22,7 @@ const RestrauntMenu = () => {
         <div className="menu">
 
             {/* Restraunt name */}
-            <div>
+            <div className="left-side-main-menu">
                 <h1>Restaurant ID: {resId}</h1>
                 <h2>{restraunt.name}</h2>
                 <img src={IMG_URL + restraunt.cloudinaryImageId} alt={restraunt.name} />
@@ -34,12 +34,15 @@ const RestrauntMenu = () => {
             </div>
 
             {/* Menu Items */}
-            <div>
+            <div className="right-side-list-menu-item">
                 <h2>Menu</h2>
                 {menuItems.length > 0 ? (
                     <ul>
                         {menuItems.map((item) => (
                             <li key={item.id}>
+                                <div>
+                                    {/* <img src={item.} alt="" /> */}
+                                </div>
                                 <div>
                                     <h3>{item.name}</h3>
                                     <p>{item.price ? `₹${item.price / 100}` : "Price not available"}</p>

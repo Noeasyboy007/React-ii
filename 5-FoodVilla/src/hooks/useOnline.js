@@ -1,4 +1,4 @@
-import { useState,useEffect } from 'react';
+import { useState, useEffect } from 'react';
 
 
 const useOnline = () => {
@@ -6,13 +6,20 @@ const useOnline = () => {
 
     useEffect(() => {
 
-        window.addEventListener("online", () => {
+        const handelOnline = () => {
             setIsOnline(true);
-        });
-
-        window.addEventListener("offline", () => {
+        }
+        const handelOffline = () => {
             setIsOnline(false);
-        });
+        }
+
+        window.addEventListener("online", handelOnline);
+        window.addEventListener("offline", handelOffline);
+        
+        return () => {
+            window.removeEventListener("online", handelOnline);
+            window.removeEventListener("offline", handelOffline);
+        }
     }, []);
 
     return isOnline; //return true or false
