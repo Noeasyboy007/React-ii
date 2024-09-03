@@ -10,7 +10,7 @@ import useOnline from "../hooks/useOnline";
 const Body = () => {
     const [searchInput, setSearchInput] = useState("");
     const { allRestraunts, filterRestraunts, setFilterRestraunt, loading, error } = useBody();
-    
+
     // Check if the user is online or offline
     const isOnline = useOnline();
 
@@ -30,19 +30,19 @@ const Body = () => {
     }
 
     return (
-        <div className="body">
-            <div className="search-container">
+        <div className="p-4 bg-gray-100 min-h-screen font-custom">
+            <div className="search-container flex items-center justify-center mb-6">
                 {/* Search input */}
                 <input
                     type="text"
-                    className="search-input"
+                    className="search-input border border-gray-300 rounded-lg p-2 w-full md:w-1/3 shadow-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                     placeholder="Search"
                     value={searchInput}
                     onChange={(e) => setSearchInput(e.target.value)}
                 />
                 {/* Search Button */}
                 <button
-                    className="search-btn"
+                    className="search-btn ml-4 bg-blue-600 text-white px-4 py-2 rounded-lg shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-300"
                     onClick={() => {
                         const data = filterData(searchInput, allRestraunts);
                         setFilterRestraunt(data);
@@ -53,15 +53,15 @@ const Body = () => {
             </div>
 
             {/* Show all restaurant cards */}
-            <div className="restraunt-list">
+            <div className="restraunt-list grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 ">
                 {filterRestraunts.length > 0 ? (
                     filterRestraunts.map((restraunt) => (
-                        <Link to={"/restraunt/" + restraunt.info.id} key={restraunt.info.id}>
+                        <Link to={`/restraunt/${restraunt.info.id}`} key={restraunt.info.id}>
                             <RestrauntCard {...restraunt.info} />
                         </Link>
                     ))
                 ) : (
-                    <div>No restaurants found.</div>
+                    <div className="text-center text-gray-600">No restaurants found.</div>
                 )}
             </div>
         </div>

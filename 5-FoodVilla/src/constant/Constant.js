@@ -1458,9 +1458,13 @@ export const FETCH_MENUURL = "https://www.swiggy.com/dapi/menu/pl?page-type=REGU
 
 export const Title = () => (
     <a href="/">
-        <img className="logo" src="https://5.imimg.com/data5/SELLER/Default/2023/7/324805815/WL/BJ/AZ/34859706/touch2success-500x500.png"
+        <img
+            className="logo h-16 w-16 md:h-20 md:w-20 rounded-20 shadow-lg"
+            src="https://5.imimg.com/data5/SELLER/Default/2023/7/324805815/WL/BJ/AZ/34859706/touch2success-500x500.png"
+            alt="Company Logo"
         />
     </a>
 );
+
 
 // ${resId}&catalog_qa=undefined&submitAction=ENTER
