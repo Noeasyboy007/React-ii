@@ -1,7 +1,7 @@
 const DtataFetchError = () => {
     return (
         <div className="flex items-center justify-center h-screen bg-gray-100">
-            <div className="text-center p-6 bg-white rounded-lg shadow-lg">
+            <div className="text-center p-6 bg-gray-300 rounded-lg shadow-lg">
                 <div className="text-red-500 mb-4">
                     <svg
                         xmlns="http://www.w3.org/2000/svg"

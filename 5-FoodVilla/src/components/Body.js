@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import { filterData } from "../utils/restrauntFilter";
 import useBody from "../hooks/useBody";
 import useOnline from "../hooks/useOnline";
+import DtataFetchError from "../utils/DataFetchError";
 
 // Body component
 const Body = () => {
@@ -16,7 +17,7 @@ const Body = () => {
 
     // If offline, show the offline message
     if (!isOnline) {
-        return <div className="offline">No internet connection. Please check your internet connection and try again.</div>;
+        return <DtataFetchError />
     }
 
     // If still loading, show the skeleton UI
@@ -25,9 +26,9 @@ const Body = () => {
     }
 
     // If there was an error, display the error message
-    if (error) {
-        return <div className="error-message">{error}</div>;
-    }
+    // if (error) {
+    //     return <div className="error-message">{error}</div>;
+    // }
 
     return (
         <div className="p-4 bg-gray-100 min-h-screen font-custom">
@@ -54,16 +55,14 @@ const Body = () => {
 
             {/* Show all restaurant cards */}
             <div className="restraunt-list grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 ">
-                {filterRestraunts.length > 0 ? (
-                    filterRestraunts.map((restraunt) => (
-                        <Link to={`/restraunt/${restraunt.info.id}`} key={restraunt.info.id}>
-                            <RestrauntCard {...restraunt.info} />
-                        </Link>
-                    ))
-                ) : (
-                    <div className="text-center text-gray-600">No restaurants found.</div>
-                )}
+                {filterRestraunts.map((restraunt) => (
+                    <Link to={`/restraunt/${restraunt.info.id}`} key={restraunt.info.id}>
+                        <RestrauntCard {...restraunt.info} />
+                    </Link>
+                ))}
             </div>
+            {/* If there are no restaurants, display the DataFetchError component outside the map */}
+            {filterRestraunts.length === 0 && <DtataFetchError />}
         </div>
     );
 };
