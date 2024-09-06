@@ -6,7 +6,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        custom: ['Lobster', 'sans-serif'], // Replace with your font
+        custom: ['Averia Libre, system-ui', 'sans-serif'], // Replace with your font
       },
     },
   },
