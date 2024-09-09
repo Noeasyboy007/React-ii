@@ -1,4 +1,4 @@
-import React, { lazy, Suspense } from 'react';
+import React, { lazy, Suspense, useState } from 'react';
 import ReactDOM from 'react-dom/client';
 import Header from './components/Header.js';
 import Body from './components/Body.js';
@@ -18,6 +18,11 @@ const InstaDelivery = lazy(() => import('./components/InstaDelivery.js'))
 
 //AppLayout component
 const AppLayout = () => {
+
+  const [user, setUser] = useState({
+    nsme: "Aritra Bera",
+    email: "aritrabera@gmail.com",
+  })
   return (
     <>
       <Header />
