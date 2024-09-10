@@ -1,7 +1,7 @@
 import { useState } from 'react';
 
 const Section = ({ title, descriptions }) => {
-    const [isVisible, setIsVisible] = useState(false);
+    const [isVisible, setIsVisible] = useState();
 
     return (
         <div className="p-6 bg-white rounded-lg shadow-md mb-6">

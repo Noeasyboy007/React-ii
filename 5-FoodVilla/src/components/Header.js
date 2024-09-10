@@ -32,14 +32,14 @@ const Header = () => {
               {isLoggedIn ? (
                 <button
                   onClick={() => setIsLoggedIn(false)}
-                  className="bg-blue-600 hover:bg-blue-800 text-gray py-2 px-4 rounded-lg transition duration-300"
+                  className="bg-blue-600 hover:bg-blue-800 text-white py-2 px-4 rounded-lg transition duration-300"
                 >
                   Logout
                 </button>
               ) : (
                 <button
                   onClick={() => setIsLoggedIn(true)}
-                  className="bg-blue-600 hover:bg-blue-800 text-gray py-2 px-4 rounded-lg transition duration-300"
+                  className="bg-blue-600 hover:bg-blue-800 text-white py-2 px-4 rounded-lg transition duration-300"
                 >
                   Login
                 </button>
