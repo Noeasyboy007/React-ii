@@ -13,8 +13,9 @@ import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 
 
 
-// Lazy  Loadiing Component
+// Lazy  Loadding Component
 const InstaDelivery = lazy(() => import('./components/InstaDelivery.js'))
+import { useEffect } from 'react';
 
 //AppLayout component
 const AppLayout = () => {
@@ -23,6 +24,7 @@ const AppLayout = () => {
     nsme: "Aritra Bera",
     email: "aritrabera@gmail.com",
   })
+
   return (
     <>
       <Header />
