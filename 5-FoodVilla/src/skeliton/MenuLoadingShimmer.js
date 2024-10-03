@@ -13,6 +13,8 @@ const MenuLoadingShimmer = () => {
         </div>
       </div>
 
+      
+
       {/* Menu Items Shimmer */}
       <div className="space-y-6">
         {[...Array(6)].map((_, index) => (

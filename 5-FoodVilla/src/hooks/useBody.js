@@ -8,6 +8,7 @@ const useBody = () => {
     const [filterRestraunts, setFilterRestraunt] = useState([]); // original list
     const [loading, setLoading] = useState(true); // Loading state
     const [error, setError] = useState(null); // Error state
+    
 
     // Fetch data from API (Function)
     async function getRestaurants() {

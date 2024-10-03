@@ -34,6 +34,7 @@ const AppLayout = () => {
   );
 };
 
+
 //Routing Configuration
 const appRouter = createBrowserRouter([
   {
